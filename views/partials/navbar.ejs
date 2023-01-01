@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">CampLife</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/campgrounds">Campgrounds</a>
+        <a class="nav-link" href="/campgrounds/new">New campground</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <% if(!currentUser){ %>
+          <a class="nav-link" href="/users/login">Login</a>
+          <a class="nav-link" href="/users/register">Register</a>
+        <% }else{%> 
+          <a class="nav-link" href="/users/logout">Logout</a>
+        <% } %>
+        <a class="nav-link" href="/about">About</a>
+      </div>
+    </div>
+  </div>
+</nav>
